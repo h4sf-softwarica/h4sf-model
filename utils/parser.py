@@ -1,6 +1,6 @@
 import json
 
-def get_highest_confidence_predictions_per_model(json_file_path):
+def get_top_preds(json_file_path):
     """
     Reads a JSON file and returns a simplified list where for each image,
     for each model, only the prediction with the highest confidence is included.
@@ -12,8 +12,9 @@ def get_highest_confidence_predictions_per_model(json_file_path):
         list: A list of dictionaries for each image with highest-confidence predictions per model.
     
     Usage:
-        from utils.parser import get_highest_confidence_predictions_per_model
-        get_highest_confidence_predictions_per_model(<path-to-your-json>)
+        from utils.parser import get_top_preds
+        get_top_preds("<path-to-your-json>")
+        
     """
     with open(json_file_path, 'r') as file:
         data = json.load(file)
