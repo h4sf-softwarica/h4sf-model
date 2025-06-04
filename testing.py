@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 # Load the YOLOv8 model
-model_path = r".\best.pt"
+model_path = r".\best_weights.pt"
 model = YOLO(model_path)
 
 # Your class names in the correct order
