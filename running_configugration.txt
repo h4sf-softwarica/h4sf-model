@@ -1,0 +1,35 @@
+python main.py [--input PATH] [--output DIR] [--model MODEL_NAME] [--confidence FLOAT]
+               [--no-ai] [--no-hazard] [--no-gemini-fallback] [--mode MODE]
+               [--video VIDEO_PATH] [--frame_skip INT]
+
+
+python main.py --input path/to/images	Basic processing, default model
+python main.py --input path/to/images --confidence 0.6	High confidence only (60%)
+python main.py --input path/to/images --model meat	Use meat detection model
+python main.py --input path/to/images --model sausage	Use sausage model
+python main.py --input path/to/images --output custom_results	Save results to custom folder
+python main.py --input path/to/images --no-ai	No Gemini, faster detection
+python main.py --input path/to/images --no-hazard	Skip hazard reports
+python main.py --input path/to/images --no-gemini-fallback	Disable cloud fallback
+python main.py --input path/to/images --model kitchen --confidence 0.5 --output out --no-hazard	Custom config example
+
+Video File Mode
+Command	Description
+python main.py --mode video --video path/to/video.mp4	Process full video
+python main.py --mode video --video path/to/video.mp4 --frame_skip 10	Faster, every 10th frame
+python main.py --mode video --video path/to/video.mp4 --model sausage	Use sausage model
+python main.py --mode video --video path/to/video.mp4 --output video_analysis	Save to custom folder
+
+Webcam Monitoring
+Command	Description
+python main.py --mode webcam	Live default monitoring
+python main.py --mode webcam --model meat	Monitor meat in real time
+python main.py --mode webcam --confidence 0.5	Set higher detection threshold
+python main.py --mode webcam --no-ai	Only object detection, no AI
+
+Special Use Cases
+Command	Description
+python main.py --input path/to/images --confidence 0.6 --no-ai --no-gemini-fallback --output quick_scan	Fast hazard-only scan
+python main.py --input path/to/images --model kitchen --confidence 0.4 --output full_audit	Full kitchen audit
+python main.py --mode video --video production_line.mp4 --model sausage --confidence 0.5 --output production_qa	Sausage production QA
+python main.py --mode webcam --model meat --confidence 0.6	Real-time meat inspection

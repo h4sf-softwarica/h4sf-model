@@ -1,0 +1,163 @@
+[
+    {
+        "image": "daging-tanpa-horse-1_istockphoto-612392184-612x612_jpg.rf.4310b7972eb3125ce862bfdfbc7d9aa6.jpg",
+        "models": {
+            "meat": {
+                "class": "pork",
+                "confidence": 0.948,
+                "bbox": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 0,
+                    "h": 0
+                }
+            },
+            "kitchen": "No detections",
+            "sausage": "No detections"
+        }
+    },
+    {
+        "image": "gloves-1_img--102-_jpg.rf.15c7ba51843ce931991d66b7d98bf7ee.jpg",
+        "models": {
+            "meat": "No detections",
+            "kitchen": "No detections",
+            "sausage": "No detections"
+        }
+    },
+    {
+        "image": "HairNet-detection-1_g-f-products-safety-accessories-13040-100-1f_600_jpg.rf.fe25d8ad580a89f29cd3dbb7acfa228c.jpg",
+        "models": {
+            "meat": {
+                "class": "chicken",
+                "confidence": 0.961,
+                "bbox": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 0,
+                    "h": 0
+                }
+            },
+            "kitchen": "No detections",
+            "sausage": "No detections"
+        }
+    },
+    {
+        "image": "HairNet-detection-1_image7_jpg.rf.44d35ec124596637bcc654ef928ad713.jpg",
+        "models": {
+            "meat": {
+                "class": "chicken",
+                "confidence": 0.96,
+                "bbox": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 0,
+                    "h": 0
+                }
+            },
+            "kitchen": "No detections",
+            "sausage": "No detections"
+        }
+    },
+    {
+        "image": "kitchen-detection-2_img_177_jpg.rf.4cc0e349ec7649bb4721dded9f127a1c.jpg",
+        "models": {
+            "meat": {
+                "class": "chicken",
+                "confidence": 0.956,
+                "bbox": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 0,
+                    "h": 0
+                }
+            },
+            "kitchen": {
+                "class": "apron",
+                "confidence": 0.907,
+                "bbox": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 0,
+                    "h": 0
+                }
+            },
+            "sausage": "No detections"
+        }
+    },
+    {
+        "image": "kitchen-detection-2_maksssksksss292_png_jpg.rf.645b4d17f3857ad438afd24b39003807.jpg",
+        "models": {
+            "meat": {
+                "class": "chicken",
+                "confidence": 0.965,
+                "bbox": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 0,
+                    "h": 0
+                }
+            },
+            "kitchen": "No detections",
+            "sausage": "No detections"
+        }
+    },
+    {
+        "image": "kitchen-detection-2_maksssksksss707_png_jpg.rf.a7cc148f774f775d91494269e59f5e72.jpg",
+        "models": {
+            "meat": {
+                "class": "chicken",
+                "confidence": 0.996,
+                "bbox": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 0,
+                    "h": 0
+                }
+            },
+            "kitchen": {
+                "class": "with_mask",
+                "confidence": 0.945,
+                "bbox": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 0,
+                    "h": 0
+                }
+            },
+            "sausage": "No detections"
+        }
+    },
+    {
+        "image": "kitchen-detection-2_Tornado-Of-Fire-Caught-On-Tape-In-Australia-Fire-Twister_jpg.rf.4007e91e210f1e18e664029faf2e11ff.jpg",
+        "models": {
+            "meat": "No detections",
+            "kitchen": "No detections",
+            "sausage": "No detections"
+        }
+    },
+    {
+        "image": "Sausages-Undistort-1_raznoe_3_0390_jpg.rf.00b1f6757100336dcf69b7a3ada07480.jpg",
+        "models": {
+            "meat": "No detections",
+            "kitchen": "No detections",
+            "sausage": "No detections"
+        }
+    },
+    {
+        "image": "Sausages-Undistort-1_raznoe_6_0199_jpg.rf.1cc955df0c73eceb724f228af88d6e68.jpg",
+        "models": {
+            "meat": "No detections",
+            "kitchen": "No detections",
+            "sausage": {
+                "class": "no_ss",
+                "confidence": 0.795,
+                "bbox": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 0,
+                    "h": 0
+                }
+            }
+        }
+    }
+]
