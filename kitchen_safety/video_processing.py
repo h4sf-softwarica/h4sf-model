@@ -12,7 +12,7 @@ def process_prerecorded_video(video_path, model="meat", confidence=0.3,
                              save_output=False, frame_skip=15, output="output",
                              enable_ai_analysis=True):
     """Process a pre-recorded video file with Gemini AI analysis - simple and fast"""
-    print(f"\n🎥 Starting video analysis: {video_path}")
+    print(f"\nStarting video analysis: {video_path}")
     
     # Create output directory
     os.makedirs(output, exist_ok=True)
@@ -21,7 +21,7 @@ def process_prerecorded_video(video_path, model="meat", confidence=0.3,
     safety_advisor = SafetyAdvisor() if enable_ai_analysis else None
     
     if not safety_advisor:
-        print("❌ AI analysis is disabled. Enable it to analyze videos.")
+        print("AI analysis is disabled. Enable it to analyze videos.")
         return
     
     # Get video info for logging
@@ -32,17 +32,17 @@ def process_prerecorded_video(video_path, model="meat", confidence=0.3,
         fps = cap.get(cv2.CAP_PROP_FPS)
         total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
         duration = total_frames / fps
-        print(f"📊 Video Info: {width}x{height}, {duration:.1f}s, {total_frames} frames")
+        print(f"Video Info: {width}x{height}, {duration:.1f}s, {total_frames} frames")
         cap.release()
     
     start_time = time.time()
     
     # Send entire video to Gemini for analysis
-    print("🤖 Sending video to Gemini AI for complete analysis...")
+    print("Sending video to Gemini AI for complete analysis...")
     video_analysis = safety_advisor.analyze_video(video_path)
     
     if video_analysis:
-        print(f"\n📋 Analysis completed in {time.time() - start_time:.1f}s")
+        print(f"\nAnalysis completed in {time.time() - start_time:.1f}s")
         
         # Save analysis to file
         analysis_path = os.path.join(output, "video_safety_analysis.txt")
@@ -56,12 +56,12 @@ def process_prerecorded_video(video_path, model="meat", confidence=0.3,
             f.write("-" * 30 + "\n\n")
             f.write(video_analysis)
         
-        print(f"💾 Analysis saved to: {analysis_path}")
+        print(f"Analysis saved to: {analysis_path}")
         
         # Show summary
-        print(f"\n🛡️ VIDEO ANALYSIS COMPLETE")
-        print(f"⏱️ Total time: {time.time() - start_time:.1f}s")
-        print(f"📂 Results saved to: {output}")
+        print(f"\nVIDEO ANALYSIS COMPLETE")
+        print(f"Total time: {time.time() - start_time:.1f}s")
+        print(f"Results saved to: {output}")
         
         # Quick hazard detection summary
         hazard_keywords = ['danger', 'hazard', 'unsafe', 'risk', 'warning', 'caution', 'safety', 'concern']
@@ -69,12 +69,12 @@ def process_prerecorded_video(video_path, model="meat", confidence=0.3,
                              if keyword.lower() in video_analysis.lower())
         
         if hazard_mentions > 0:
-            print(f"⚠️ Safety-related mentions detected: {hazard_mentions}")
+            print(f"Safety-related mentions detected: {hazard_mentions}")
         else:
-            print("✅ Analysis completed")
+            print("Analysis completed")
         
         return video_analysis
     
     else:
-        print("❌ Failed to analyze video with Gemini AI")
+        print("Failed to analyze video with Gemini AI")
         return None

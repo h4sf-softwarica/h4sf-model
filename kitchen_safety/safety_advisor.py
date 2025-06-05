@@ -44,21 +44,21 @@ class SafetyAdvisor:
             
             return response.text
         except Exception as e:
-            print(f"🚨 Vision analysis error: {str(e)}")
+            print(f"Vision analysis error: {str(e)}")
             return "Image analysis service is currently unavailable."
     
     def analyze_video(self, video_path):
         """Analyze entire video using Gemini's video capabilities"""
         try:
-            print(f"🎥 Uploading video for analysis: {video_path}")
+            print(f"Uploading video for analysis: {video_path}")
             
             # Upload video file to Gemini
             video_file = genai.upload_file(path=video_path)
-            print(f"✅ Video uploaded successfully")
+            print(f"Video uploaded successfully")
             
             # Wait for video processing
             while video_file.state.name == "PROCESSING":
-                print("⏳ Waiting for video processing...")
+                print("Waiting for video processing...")
                 time.sleep(2)
                 video_file = genai.get_file(video_file.name)
             
@@ -108,7 +108,7 @@ class SafetyAdvisor:
             return response.text
             
         except Exception as e:
-            print(f"🚨 Video analysis error: {str(e)}")
+            print(f"Video analysis error: {str(e)}")
             return f"Video analysis service encountered an error: {str(e)}"
     
     def analyze_frame(self, frame):
@@ -135,7 +135,7 @@ class SafetyAdvisor:
             
             return response.text
         except Exception as e:
-            print(f"🚨 Frame analysis error: {str(e)}")
+            print(f"Frame analysis error: {str(e)}")
             return "Frame analysis temporarily unavailable."
     
     def analyze_video_frame(self, frame, previous_insights):
@@ -180,7 +180,7 @@ class SafetyAdvisor:
             
             return new_objects
         except Exception as e:
-            print(f"🚨 Object detection error: {str(e)}")
+            print(f"Object detection error: {str(e)}")
             return []
     
     def generate_safety_report(self, detections, analysis_results):
@@ -213,5 +213,5 @@ class SafetyAdvisor:
             return response.text
             
         except Exception as e:
-            print(f"🚨 Report generation error: {str(e)}")
+            print(f"Report generation error: {str(e)}")
             return "Safety report generation temporarily unavailable."

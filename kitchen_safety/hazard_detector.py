@@ -109,6 +109,6 @@ def save_hazard_report(input_path, output_dir):
     with open(report_path, 'w') as f:
         json.dump(hazards, f, indent=4)
     
-    print(f"⚠️ Hazard report saved to: {report_path}")
+    print(f"Hazard report saved to: {report_path}")
     print(f"Detected {len(hazards)} images with safety hazards")
     return report_path

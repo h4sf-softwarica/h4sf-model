@@ -57,7 +57,7 @@ def main():
             print("Error: Video path required for video mode")
             return
             
-        print(f"\n🎥 Processing video: {args.video}")
+        print(f"\nProcessing video: {args.video}")
         from kitchen_safety.video_processing import process_prerecorded_video
         process_prerecorded_video(
             video_path=args.video,

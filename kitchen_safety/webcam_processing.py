@@ -60,7 +60,7 @@ def process_webcam(model="meat", confidence=0.3, enable_ai_analysis=True):
                 if current_time - last_analysis_time > ANALYSIS_INTERVAL:
                     ai_insight = safety_advisor.get_proactive_alert(frame)
                     if ai_insight:
-                        print(f"\n🔍 AI Insight: {ai_insight}")
+                        print(f"\nAI Insight: {ai_insight}")
                         last_analysis_time = current_time
             
             # Visualize predictions
@@ -88,7 +88,7 @@ def process_webcam(model="meat", confidence=0.3, enable_ai_analysis=True):
                 print(f" Switched to model: {model_manager.current_model}")
             elif key == ord('a') and safety_advisor:  # Trigger AI analysis
                 ai_insight = safety_advisor.analyze_image(frame)
-                print(f"\n🔍 Manual AI Analysis:\n{ai_insight}")
+                print(f"\nManual AI Analysis:\n{ai_insight}")
             elif key == ord('c'):  # Confidence down
                 confidence = max(0.1, confidence - 0.05)
                 print(f" Confidence threshold: {confidence:.2f}")

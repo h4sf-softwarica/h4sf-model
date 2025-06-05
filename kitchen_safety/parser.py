@@ -68,5 +68,5 @@ def save_simplified_results(input_path, output_dir):
     with open(simplified_path, 'w') as f:
         json.dump(simplified, f, indent=4)
     
-    print(f"✅ Simplified results saved to: {simplified_path}")
+    print(f"Simplified results saved to: {simplified_path}")
     return simplified_path
